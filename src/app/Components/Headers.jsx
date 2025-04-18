@@ -34,7 +34,7 @@ const Headers = () => {
                         <h3 className="font-bold  text-cardblacktxt text-[14px] font-HeadingFont">Moni Roy</h3>
                         <p className="text-sm  text-r">Admin</p>
                     </div>
-                    <div className='w-[18] h-[18] border-[0.1px] border-[#5c5c5c70]  p-1 rounded-full flex items-center justify-center'>
+                    <div className='w-[30] h-[30] border-[0.1px] border-[#5c5c5c70]  p-1 rounded-full flex items-center justify-center'>
                         <Image src={DropDown} alt='' height={30} width={30} className="   " />
 
                     </div>

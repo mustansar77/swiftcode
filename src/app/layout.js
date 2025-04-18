@@ -31,11 +31,11 @@ export default function RootLayout({ children }) {
 
       >
 
-        <div className="flex  w-full h-screen  ">
+        <div className="flex  w-full ">
           <div className="w-[15%]" ><Sidebar /></div>
           <div className=" w-[85%] flex flex-col">
             <div className="  sticky " ><Headers /></div>
-            <div className=" overflow-y-scroll "> {children} </div>
+            <div className=" "> {children} </div>
           </div>
 
         </div>
