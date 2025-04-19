@@ -31,13 +31,13 @@ const LineChart = () => {
                 data: [20, 40, 60, 80, 100],
                 fill: false,
                 borderColor: '#0070f3',
-                // tension: 0.4,
             },
         ],
     };
 
     const options = {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 position: 'top',
@@ -67,29 +67,22 @@ const LineChart = () => {
 
     return (
         <>
-            <div className="flex justify-between">
-                <div><h1 className='text-[24px] font-bold font-HeadingFont text-cardblacktxt'>Filings Overtime </h1></div>
-                {/* <div className="border: 0.6px solid bg-lightgrey"> */}
-                <select name="" id="" className="bg-transparent border border-gray-400 text-black px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-buttonBackground">
-                    <option value="January">January</option>
-                    <option value="February">February</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option selected value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
+                <h1 className='text-xl font-bold font-HeadingFont text-cardblacktxt'>Filings Overtime</h1>
+                <select
+                    className="bg-transparent border border-gray-400 text-black px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-buttonBackground"
+                    defaultValue="October"
+                >
+                    {[
+                        'January', 'February', 'March', 'April', 'May', 'June',
+                        'July', 'August', 'September', 'October', 'November', 'December'
+                    ].map(month => (
+                        <option key={month} value={month}>{month}</option>
+                    ))}
                 </select>
-                {/* </div> */}
             </div>
-            <div className="w-full  ">
-                <div className="w-[100%] h-[350px]">
-                    <Line data={data} options={options} />
-                </div>
+            <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+                <Line data={data} options={options} />
             </div>
         </>
     );

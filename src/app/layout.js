@@ -1,21 +1,21 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Headers from "./Components/Headers";
-import Sidebar from "./Components/Sidebar";
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import Headers from './Components/Headers';
+import Sidebar from './Components/Sidebar';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata = {
-  title: "SwiftDocket",
-  description: "Hurtech",
+  title: 'SwiftDocket',
+  description: 'Hurtech',
 };
 
 export default function RootLayout({ children }) {
@@ -27,17 +27,25 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans`}>
+        <div className="flex h-screen w-full">
+          {/* Sidebar */}
+          <aside className="hidden md:block md:w-[15%] bg-white border-r border-borderColor">
+            <Sidebar />
+          </aside>
 
-      >
+          {/* Main Content */}
+          <div className="flex flex-col flex-1">
+            {/* Header */}
+            <header className="sticky top-0 z-10 bg-white shadow">
+              <Headers />
+            </header>
 
-        <div className="flex  w-full h-screen  ">
-          <div className="w-[15%]" ><Sidebar /></div>
-          <div className=" w-[85%] flex flex-col">
-            <div className="  sticky " ><Headers /></div>
-            <div className=" overflow-y-scroll "> {children} </div>
+            {/* Page Content */}
+            <main className="flex-1 overflow-y-auto bg-bgcolor p-4">
+              {children}
+            </main>
           </div>
-
         </div>
       </body>
     </html>
