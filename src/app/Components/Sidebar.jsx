@@ -31,7 +31,7 @@ const Sidebar = () => {
     const navItems = [
         { name: 'Dashboard', path: '/Dashboard', icon: dashboardDarkIcon, iconActive: Dashboard, },
         { name: 'Upload Filings', path: '/UploadFilings', icon: UploadFilings, iconActive: uploadFilingsWhiteIcon, },
-        { name: 'MyFilings', path: '/MyFilings', icon: Heart, iconActive: heartWhiteIcon, },
+        { name: 'MyFilings', path: '/myfillings', icon: Heart, iconActive: heartWhiteIcon, },
         { name: 'Templates', path: '/template', icon: Message, iconActive: templateWhiteIcon, },
         { name: 'Billing', path: '/biling', icon: Ticksbar, iconActive: billingWhiteIcon, },
         { name: 'Help', path: '/help', icon: Help, iconActive: helpWhiteIcon, },
