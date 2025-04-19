@@ -20,7 +20,7 @@ import dashboardDarkIcon from '../../../public/5.svg'
 import uploadFilingsWhiteIcon from '../../../public/6.svg'
 import logoutWhiteIcon from '../../../public/power.svg'
 
-import { Power } from 'lucide-react'
+
 
 
 
