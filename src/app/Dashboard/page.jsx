@@ -1,7 +1,5 @@
 import React from 'react'
 import Dashboard from '../pages/Dashboard'
-
-
 const page = () => {
     return (
         <div>
@@ -9,5 +7,4 @@ const page = () => {
         </div>
     )
 }
-
 export default page

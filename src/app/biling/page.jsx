@@ -1,9 +1,7 @@
 import React from 'react'
-
 const page = () => {
-  return (
-    <div>biling page</div>
-  )
+    return (
+        <div>Billig</div>
+    )
 }
-
 export default page

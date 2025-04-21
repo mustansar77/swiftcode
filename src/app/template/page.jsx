@@ -1,9 +1,7 @@
 import React from 'react'
-
 const page = () => {
   return (
-    <div> template page</div>
+    <div> Template </div>
   )
 }
-
 export default page

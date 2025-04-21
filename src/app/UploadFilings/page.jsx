@@ -1,7 +1,5 @@
 import React from 'react'
 import UploadFilings from '../pages/UploadFilings'
-
-
 const page = () => {
   return (
     <div>
@@ -9,5 +7,4 @@ const page = () => {
     </div>
   )
 }
-
 export default page
